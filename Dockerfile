@@ -21,6 +21,7 @@ RUN apt-get update && \
         curl \
         wget \
         libgtest-dev \
+        cppcheck \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install jinja2 pygments wheel
