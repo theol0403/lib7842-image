@@ -24,6 +24,7 @@ RUN apt-get update && \
         libgtest-dev \
         cppcheck \
         gcc-9 --no-install-recommends \
+        g++-9 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install jinja2 pygments wheel
