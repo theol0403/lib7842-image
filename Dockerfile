@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install software-properties-common -y && \
     add-apt-repository ppa:team-gcc-arm-embedded/ppa -y && \
+    add-apt-repository ppa:ubuntu-toolchain-r/test -y && \
     apt-get install -y tzdata && \
     apt-get install -y \
         build-essential \
@@ -22,6 +23,7 @@ RUN apt-get update && \
         wget \
         libgtest-dev \
         cppcheck \
+        gcc-9 --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install jinja2 pygments wheel
