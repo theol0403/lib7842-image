@@ -18,11 +18,9 @@ RUN apt-get update && \
         sudo \
         curl \
         wget \
-        libgtest-dev \
         cppcheck \
         gcc-10 --no-install-recommends \
         g++-10 \
-        lcov \
         libsdl2-dev \
     && rm -rf /var/lib/apt/lists/*
     
